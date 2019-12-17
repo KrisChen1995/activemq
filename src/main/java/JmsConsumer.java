@@ -23,16 +23,18 @@ public class JmsConsumer {
 
 			//5.创建消息的消费者
 			MessageConsumer consumer = session.createConsumer(queue);
-
+			/*
+			同步阻塞方法(receive)
+			订阅者或接收者调用MessageConsumer的receive方法来接收消息，receive方法在能够接收到消息之前(或者超时之前)将一直阻塞
 			while(true){
 				//6.消费者接收消息,接收的消息类型与生产的消息类型一致(TextMessage)
-				TextMessage textMessage = (TextMessage)consumer.receive();
+				TextMessage textMessage = (TextMessage)consumer.receive(4000L);//时间4s后没有消息消费就离开
 				if(textMessage != null){
 					System.out.println("********消费者接收到消息" + textMessage.getText());
 				}else {
 					break;
 				}
-			}
+			} */
 			consumer.close();
 			session.close();
 			connection.close();
