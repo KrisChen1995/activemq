@@ -1,11 +1,12 @@
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
+import java.io.IOException;
 
 public class JmsConsumer {
 	public static final String ACTIVEMQ_URL = "tcp://192.168.136.128:61616";
 	public static final String QUEUE_NAME = "queue01";
-	public static void main(String[] args) throws JMSException {
+	public static void main(String[] args) throws JMSException, IOException {
 
 			//1.创建连接工厂,按照给定的URL地址采用默认用户名和密码
 			ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(ACTIVEMQ_URL);
@@ -34,9 +35,25 @@ public class JmsConsumer {
 				}else {
 					break;
 				}
-			} */
+			}
+			consumer.close();
+			session.close();
+			connection.close();*/
+			//通过监听的方式消费消息
+			consumer.setMessageListener((message) ->{
+				if(null != message && message instanceof TextMessage){
+					TextMessage textMessage = (TextMessage)message ;
+					try {
+						System.out.println("********消费者接收到消息" + textMessage.getText());
+					} catch (JMSException e) {
+						e.printStackTrace();
+					}
+				}
+			});
+			System.in.read();//保证控制台不关,保证一直监听消息
 			consumer.close();
 			session.close();
 			connection.close();
+
 	}
 }

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a0c2238-6ef7-4377-83d5-3fef45eadb5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JmsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JmsConsumer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +38,7 @@
   <component name="ProjectId" id="1V6Irc1cZXFbE0oDyuFew33EJMY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -88,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576567317580</updated>
-      <workItem from="1576567321491" duration="5910000" />
+      <workItem from="1576567321491" duration="7013000" />
+      <workItem from="1576632343811" duration="4348000" />
     </task>
     <servers />
   </component>
@@ -100,7 +103,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
