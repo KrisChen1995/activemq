@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a0c2238-6ef7-4377-83d5-3fef45eadb5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/topic/JMSConsumer_topic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/topic/JMSProduce_topic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JmsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JmsConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JmsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue/JmsConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JmsProduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queue/JmsProduce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JmsConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JmsProduce.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +43,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1V6Irc1cZXFbE0oDyuFew33EJMY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,23 +67,57 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JmsConsumer">
+  <component name="RunManager" selected="Application.JMSProduce_topic">
+    <configuration name="JMSConsumer_topic" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="topic.JMSConsumer_topic" />
+      <module name="activemq_demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="topic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMSProduce_topic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="topic.JMSProduce_topic" />
+      <module name="activemq_demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="topic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JmsConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JmsConsumer" />
+      <option name="MAIN_CLASS_NAME" value="queue.JmsConsumer" />
       <module name="activemq_demo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="JmsProduce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JmsProduce" />
+      <option name="MAIN_CLASS_NAME" value="queue.JmsProduce" />
       <module name="activemq_demo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.JmsConsumer" />
+      <item itemvalue="Application.JMSConsumer_topic" />
+      <item itemvalue="Application.JmsProduce" />
+      <item itemvalue="Application.JMSProduce_topic" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JMSProduce_topic" />
+        <item itemvalue="Application.JMSConsumer_topic" />
         <item itemvalue="Application.JmsConsumer" />
         <item itemvalue="Application.JmsProduce" />
       </list>
@@ -91,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576567317580</updated>
       <workItem from="1576567321491" duration="7013000" />
-      <workItem from="1576632343811" duration="4348000" />
+      <workItem from="1576632343811" duration="12418000" />
     </task>
     <servers />
   </component>

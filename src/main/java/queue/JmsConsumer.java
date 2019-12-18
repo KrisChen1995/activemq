@@ -1,3 +1,5 @@
+package queue;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
@@ -40,6 +42,10 @@ public class JmsConsumer {
 			session.close();
 			connection.close();*/
 			//通过监听的方式消费消息
+			/*
+			* 异步非阻塞的方式(监听器的onMessage方法)，接收者通过consumer注册的消息监听器监听当消息到达时，系统
+			* 自动调用监听器的MessageListener的onMessage(Message message)方法
+			* */
 			consumer.setMessageListener((message) ->{
 				if(null != message && message instanceof TextMessage){
 					TextMessage textMessage = (TextMessage)message ;
