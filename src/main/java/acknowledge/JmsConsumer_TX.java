@@ -1,13 +1,13 @@
-package queue;
+package acknowledge;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 import java.io.IOException;
 
-public class JmsConsumer {
+public class JmsConsumer_TX {
 	public static final String ACTIVEMQ_URL = "tcp://192.168.136.128:61616";
-	public static final String QUEUE_NAME = "queue01";
+	public static final String QUEUE_NAME = "tx01";
 	public static void main(String[] args) throws JMSException, IOException {
 
 			//1.创建连接工厂,按照给定的URL地址采用默认用户名和密码
@@ -19,7 +19,8 @@ public class JmsConsumer {
 
 			//3.创建会话session
 			//两个参数分别是boolean 事务，int 签收
-			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+			//开启手动签收需要消息确认收到，手动签收
+			Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
 
 			//4.创建目的地(是主题还是队列)
 			Queue queue = session.createQueue(QUEUE_NAME);
@@ -51,6 +52,8 @@ public class JmsConsumer {
 					TextMessage textMessage = (TextMessage)message ;
 					try {
 						System.out.println("********消费者接收到消息" + textMessage.getText());
+						//手动签收消息
+						textMessage.acknowledge();
 					} catch (JMSException e) {
 						e.printStackTrace();
 					}

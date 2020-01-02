@@ -1,12 +1,12 @@
-package queue;
+package acknowledge;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class JmsProduce {
+public class JmsProduce_TX {
 	public static final String ACTIVEMQ_URL = "tcp://192.168.136.128:61616";
-	public static final String QUEUE_NAME = "queue01";
+	public static final String QUEUE_NAME = "tx01";
 	public static void main(String[] args) throws JMSException {
 
 		//1.创建连接工厂,按照给定的URL地址采用默认用户名和密码
